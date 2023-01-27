@@ -21,7 +21,7 @@ function App() {
     const fetchMeals = async () => {
         const res = await fetch("http://localhost:3005/meal");
         const data = await res.json();
-        setMeals(data[0]);
+        setMeals(data);
     }
 
     useEffect(() => {
@@ -93,7 +93,7 @@ function App() {
                 <Route path='/Login' element={<Login isloggedin={isloggedin} setIsLoggedin={setIsLoggedin} setCurrentUser={setCurrentUser} />} />
                 <Route path='/Signup' element={<Signup isloggedin={isloggedin} setIsLoggedin={setIsLoggedin} />} />
                 <Route path='/Subscriptions' element={<Subscription currentUser={currentUser} setCurrentUser={setCurrentUser} />} />
-                <Route path='/Order' element={<Order />} />
+                <Route path='/Order' element={<Order meals={meals} />} />
             </Routes>
 
 

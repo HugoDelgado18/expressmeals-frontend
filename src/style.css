@@ -221,6 +221,20 @@
     
 }
 
+.order-form {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-top: 8%;
+    padding-left: 10%;
+    height: 100vh;
+    width: 95vw;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px rgb(180, 179, 179);
+    background-color: white;
+}
+
 .signup-form {
     display: flex;
     justify-content: space-between;

@@ -1,5 +1,7 @@
 import e from 'cors';
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 function Subscription({currentUser, setCurrentUser}) {
     const [borderColor, setBorderColor] = useState("white");
@@ -22,6 +24,8 @@ function Subscription({currentUser, setCurrentUser}) {
             meals: currentUser.meals
         }
     );
+
+    const navigate = useNavigate();
 
     const handlePricePerMeal = (number) => {
         setDaysAWeek(number);
@@ -64,6 +68,8 @@ function Subscription({currentUser, setCurrentUser}) {
         if(res.status === 200){
             setCurrentUser(editUser);
         }
+
+        navigate("/Order");
 
     }
 
